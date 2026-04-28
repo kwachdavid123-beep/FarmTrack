@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Brain</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#16a34a">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Farm Brain</h1>
+  <p id="profit">Total Profit: KES 0</p>
+</header>
+<main>
+  <section>
+    <h2>Today's Tasks</h2>
+    <ul id="taskList"></ul>
+  </section>
+  <button onclick="addTask()">+ Add Task</button>
+</main>
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+</body>
+</html>
